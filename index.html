@@ -1082,8 +1082,6 @@ setTimeout(()=>{document.getElementById('splash').classList.add('hide');document
 
 if('serviceWorker' in navigator){
   navigator.serviceWorker.getRegistrations().then(r=>r.forEach(sw=>sw.unregister()));
-  navigator.serviceWorker.register('./sw.js');
-  navigator.serviceWorker.addEventListener('message', e=>{ if(e.data==='reload') location.reload(true); });
 }
 // Clear old localStorage on every load
 const V='renni-v9';
